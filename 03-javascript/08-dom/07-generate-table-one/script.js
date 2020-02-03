@@ -11,4 +11,16 @@
 
 (() => {
     // your code here
+    // créer d'abord les balises ensuite les placer
+    let idTarget = document.getElementById('target');
+    let tableau = document.createElement('table'); // tableau = <table>
+    let monTableau = idTarget.appendChild(tableau);
+    for(let i = 0; i < 10; i++){
+        let ligne = document.createElement('tr'); // ligne = <tr>
+        for(let j = 0; j < 1; j++){
+            let colonne = document.createElement('td'); // colonne = <td>
+            ligne.appendChild(colonne);
+        }
+        monTableau.appendChild(ligne);
+    }
 })();

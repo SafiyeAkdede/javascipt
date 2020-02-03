@@ -19,4 +19,13 @@
     ];
 
     // your code here
+    let recupBalise = document.getElementsByTagName('img').item(0);
+    let i = 0;
+    document.getElementById("next").addEventListener("click", () => {
+        i++;
+        if(i>=gallery.length){
+            i=0;
+        }
+        recupBalise.setAttribute('src', gallery[i]);
+    });
 })();

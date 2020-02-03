@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        let mdpUn = document.getElementById('pass-one').value;
+        let mdpDeux = document.getElementById('pass-two').value;
+        if(mdpUn == mdpDeux){
+            alert('Les deux mots de passe sont identiques');
+        }else{
+            document.getElementById("pass-one").style.border = "solid red";
+            document.getElementById("pass-two").style.border = "solid red";
+        }
+    });
 })();

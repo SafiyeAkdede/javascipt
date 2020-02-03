@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    document.getElementById('pass-one').addEventListener('input', () => {
+        let leMot = document.getElementById('pass-one').value;
+        let validation = document.getElementById('validity');
+        let numbers = /[0-9]/;
+        if(leMot.length <= 7 && (leMot.match(numbers)).length == 2){
+            validation.innerHTML = "Ok";
+        }else{
+            validation.innerHTML = "Pas ok";
+        }
+    });
 })();

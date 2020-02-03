@@ -11,9 +11,13 @@
 
 (() => {
     // your code here
-    let recupImg = document.getElementsByTagName('img');
-    /*recupImg.addEventListener("mouseenter", () => {
-        recupImg.style.valeurAttribut;
-    });*/
-    console.log(recupImg);
+    let recupBalise = document.getElementsByTagName('img').item(0);
+    let recupAttribut = recupBalise.getAttribute('data-hover');
+    let recupSource = recupBalise.getAttribute('src');
+    recupBalise.addEventListener("mouseenter", () => {
+        recupBalise.setAttribute('src', recupAttribut);
+    });
+    recupBalise.addEventListener("mouseleave", () => {
+        recupBalise.setAttribute('src', recupSource);
+    });
 })();

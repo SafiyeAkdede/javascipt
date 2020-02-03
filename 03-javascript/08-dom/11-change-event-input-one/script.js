@@ -11,4 +11,14 @@
 
 (() => {
     // your code here
+    document.getElementById('pass-one').addEventListener('input', () => {
+        let leMot = document.getElementById('pass-one').value;
+        let nombre = document.getElementById('counter');
+        if(leMot.length > 9){
+            alert("Stop ! Tu as entré beaucoup trop de lettres !");
+            nombre.innerHTML = leMot.length + "/10";
+        }else{
+            nombre.innerHTML = leMot.length + "/10";
+        }
+    });
 })();

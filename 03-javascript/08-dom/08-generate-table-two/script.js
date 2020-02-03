@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+    let idTarget = document.getElementById('target');
+    let tableau = document.createElement('table'); // tableau = <table>
+    let monTableau = idTarget.appendChild(tableau);
+    for(let i = 1; i < 11; i++){
+        let ligne = document.createElement('tr'); // ligne = <tr>
+        for(let j = 1; j < 11; j++){
+            let colonne = document.createElement('td'); // colonne = <td>
+            let remplissage = document.createTextNode(i * j);
+            colonne.appendChild(remplissage);
+            ligne.appendChild(colonne);
+        }
+        monTableau.appendChild(ligne);
+    }
 })();
