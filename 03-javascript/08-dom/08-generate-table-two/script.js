@@ -18,7 +18,7 @@
         let ligne = document.createElement('tr'); // ligne = <tr>
         for(let j = 1; j < 11; j++){
             let colonne = document.createElement('td'); // colonne = <td>
-            let remplissage = document.createTextNode(i * j);
+            let remplissage = document.createTextNode(i +"x"+ j +"="+ i*j);
             colonne.appendChild(remplissage);
             ligne.appendChild(colonne);
         }

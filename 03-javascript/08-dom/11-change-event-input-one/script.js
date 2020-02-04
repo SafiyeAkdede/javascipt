@@ -13,12 +13,15 @@
     // your code here
     document.getElementById('pass-one').addEventListener('input', () => {
         let leMot = document.getElementById('pass-one').value;
-        let nombre = document.getElementById('counter');
-        if(leMot.length > 9){
-            alert("Stop ! Tu as entré beaucoup trop de lettres !");
-            nombre.innerHTML = leMot.length + "/10";
-        }else{
-            nombre.innerHTML = leMot.length + "/10";
-        }
+        document.getElementById('pass-one').value = leMot.substring(0, 9);
+        document.getElementById('counter').innerHTML = leMot.length+"/10";
+        
+        // let nombre = document.getElementById('counter');
+        // if(leMot.length > 9){
+        //     alert("Stop ! Tu as entré beaucoup trop de lettres !");
+        //     nombre.innerHTML = leMot.length + "/10";
+        // }else{
+        //     nombre.innerHTML = leMot.length + "/10";
+        // }
     });
 })();

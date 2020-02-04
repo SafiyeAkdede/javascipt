@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    document.getElementById('slider').addEventListener('input', () => {
+        const slider = document.getElementById('slider');
+        let leNombre = document.getElementById('target');
+        leNombre.innerHTML = "+" + slider.value;
+    });
 })();

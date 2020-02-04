@@ -11,4 +11,9 @@
 
 (() => {
     // your code here
+    const contenu = document.getElementById('target').innerHTML = "Woo-hoo ! Je fais des vagues ! Wééééé ! Oh... je crois que je vais avoir le mal de mer...";
+    const lettres = contenu.split('');
+    for(i = 0; i < lettres.length; i++){
+        contenu.style.fontSize = Math.floor((Math.random() * 30) + 10)+"px";
+    }
 })();
