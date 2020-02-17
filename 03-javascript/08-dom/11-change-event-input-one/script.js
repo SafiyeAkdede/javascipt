@@ -11,7 +11,7 @@
 
 (() => {
     // your code here
-    document.getElementById('pass-one').addEventListener('input', () => {
+    document.getElementById('pass-one').addEventListener('input', () => { //"keydown" et event.preventDefault()
         let leMot = document.getElementById('pass-one').value;
         document.getElementById('pass-one').value = leMot.substring(0, 9);
         document.getElementById('counter').innerHTML = leMot.length+"/10";

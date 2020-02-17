@@ -14,12 +14,15 @@
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     // your code here
     document.getElementById("run").addEventListener("click", () => { 
-        const values2 = Object.create(keys);
-        values2.name = "Starfire";
-        values2.species = "hero";
-        values2.age = 20;
-        values2.gender = "female";
-        values2.color = "pink";
-        console.log(values2);
+        // const values2 = Object.create(keys);
+        // values2.name = "Starfire";
+        // values2.species = "hero";
+        // values2.age = 20;
+        // values2.gender = "female";
+        // values2.color = "pink";
+        // console.log(values2);
+        const obj = Object.fromEntries(keys.map((key, i) => [key, values[i]]));
+        console.log(obj);
+        
     });
 })();

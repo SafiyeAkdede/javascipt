@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    let nombreEssai = 0;
+    let nombreAleatoire = Math.floor(Math.random() * 100) + 1; // sélection aléatoire du nombre entre 1 et 100
+    let nombreDonnee;
+    let message = "Le nombre à deviner est entre 1 et 100."
+    
+    do{
+        nombreDonnee = prompt(message);
+        nombreEssai++;
+        if(nombreDonnee > nombreAleatoire)
+            message = "C'est moins";
+        else
+            message = "C'est plus";
+    }while(nombreDonnee != nombreAleatoire);
+    alert("Bravo, tu as gagne en " + nombreEssai + " coups ! La nombre était le " + nombreDonnee);
 })();

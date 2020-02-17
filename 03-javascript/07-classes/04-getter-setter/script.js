@@ -28,6 +28,6 @@
     document.getElementById("run").addEventListener("click", () => { 
         const person1 = new Person();
         console.log(person1.name);
-        console.log(person1.name = "Safiye Akdede");
+        console.log(person1.name = "Safiye","Akdede");
     });
 })();

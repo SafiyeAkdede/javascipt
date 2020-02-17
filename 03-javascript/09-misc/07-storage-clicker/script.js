@@ -11,4 +11,17 @@
 
 (() => {
     // your code here
+    let compteur = localStorage.getItem("compter");
+
+    if (compteur === "") {
+        compteur = 0;
+    }else{
+        document.getElementById("target").innerHTML = localStorage.getItem("compter");
+    }
+
+    document.getElementById("increment").addEventListener("click", () => {
+        compteur++;
+        localStorage.setItem("compter", compteur);
+        document.getElementById("target").innerHTML = localStorage.getItem("compter");
+    });
 })();

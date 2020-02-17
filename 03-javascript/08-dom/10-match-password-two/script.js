@@ -14,6 +14,7 @@
     document.getElementById("run").addEventListener("click", () => {
         let mdpUn = document.getElementById('pass-one').value;
         let mdpDeux = document.getElementById('pass-two').value;
+        // classList.add("") et classList.remove("")
         if(mdpUn == mdpDeux){
             alert('Les deux mots de passe sont identiques');
         }else{

@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    let i = 0;
+    let contenu = document.getElementById('target').innerText;
+    document.getElementById('target').innerHTML = "";
+
+    function apparitionLettre() {
+        if(i < contenu.length){
+            document.getElementById('target').innerHTML += contenu.charAt(i);
+            i++;
+            // setTimeout sert à appeler la fonction un certain nombre de fois (2ème paramètre)
+        }
+        setTimeout(apparitionLettre, Math.floor(Math.random() * 150));
+    }
+
+    apparitionLettre();
 })();
